@@ -23,25 +23,7 @@ Copy and paste the following code into app.js:
 ```jsx
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { 
-  Fade,
-  SlideDown,
-  SlideDownBig,
-  SlideLeft,
-  SlideRight,
-  SlideRightBig ,
-  SlideUp,
-  SlideUpBig,
-  Flip,
-  FlipY,
-  FlipX,
-  Rotate,
-  RotateDownLeft,
-  RotateDownRight,
-  RotateUpLeft,
-  RotateUpRight,
-  Zoom,
-} from 'react-reveal';
+import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import './App.css';
 
 class App extends Component {
@@ -54,33 +36,33 @@ class App extends Component {
               <h1 className="App-title">React Reveal Demo</h1>
           </header>
         </Zoom>
-        <FlipY>
+        <Flip y>
           <p className="App-intro">
             This is a demo of <a href="https://github.com/rnosov/react-reveal">react-reveal</a> package. 
             Scroll down to see different reveal effects. <a href="https://github.com/rnosov/react-reveal-demo">Source code of this demo</a>.            
           </p>
-        </FlipY>
+        </Flip>
         <div style={{overflow: 'hidden'}}>
           {Array(10).fill(void 0).map( (val, index) => 
             <div key={index}>
-              <Fade />              
-              <SlideDown />
-              <SlideDownBig />
-              <SlideLeft />
-              <SlideRight />
-              <SlideRightBig  />
-              <SlideUp />
-              <SlideUpBig />
-              <Zoom />
+              <Fade />
+              <Fade down />
+              <Fade down big />
+              <Fade left />
+              <Fade left big />
+              <Fade right />
+              <Fade right big />
+              <Fade up />
+              <Fade up big />
               <Flip />
-              <FlipY />
-              <FlipX />
+              <Flip x />
+              <Flip y />
               <Rotate />
-              <RotateDownLeft />
-              <RotateDownRight />
-              <RotateUpLeft />
-              <RotateUpRight />
-              <Zoom />    
+              <Rotate down left />
+              <Rotate down right />
+              <Rotate up left />
+              <Rotate up right />
+              <Zoom />
             </div>
           )}
         </div>
@@ -90,6 +72,7 @@ class App extends Component {
 }
 
 export default App;
+
 ```
 
 Then open [http://localhost:3000/](http://localhost:3000/) to see this demo running locally.
