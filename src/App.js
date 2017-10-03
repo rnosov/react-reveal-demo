@@ -3,9 +3,11 @@ import { Fade, Flip, Rotate, Zoom } from 'react-reveal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
+
   componentDidMount() {
     window.setTimeout( () => window.scrollTo( 0, 0), 100 );
   }
+
   render() {
     const imgData = "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==";
     return (
@@ -28,10 +30,10 @@ class App extends Component {
             </div>
           </div>
         </Flip>
-        <Zoom className="jumbotron" >
+        <Flip className="jumbotron" >
           <div className="container">
-            <h1 className="display-3">React Reveal</h1>
-            <Rotate up right delay={800} wave>
+            <h1>React Reveal</h1>
+            <Rotate up right delay={500} wave>
               <p><a href="https://www.npmjs.com/package/react-reveal"> React Reveal</a> is a dead simple way to add some cool reveal on scroll animations to your React app. It's less than 2kb gzipped and specifically written for React in ES6.
               It was used to create vairous animations that you see on this page.
                   Scroll down to see more. <a href="https://github.com/rnosov/react-reveal-demo">Source code of this demo</a>.            
@@ -39,21 +41,21 @@ class App extends Component {
               <p><button onClick={ () => window.location.reload(false) } className="btn btn-primary btn-lg">Refresh Page</button></p>
             </Rotate>
           </div>
-        </Zoom>
+        </Flip>
         <div className="container">
-          <Fade up className="row" wave delay={1200}>
+          <Fade up className="row" wave delay={800}>
             <div className="col-lg-4">          
-              <img alt="" className="rounded-circle" src={imgData} width="140" height="140" />
+              <Zoom delay={1200}><img alt="" className="rounded-circle" src={imgData} width="140" height="140" /></Zoom>
               <h2>Cross Browser</h2>
               <p>Works in any moder desktop and mobile browser including Internet Explorer 10. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             </div>
             <div className="col-lg-4">
-              <img alt="" className="rounded-circle" src={imgData} width="140" height="140" />
+              <Zoom delay={1400}><img alt="" className="rounded-circle" src={imgData} width="140" height="140" /></Zoom>
               <h2>Small Size</h2>
               <p>React Reveal is less than 2kb gzipped and specifically written for React in ES6. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             </div>
             <div className="col-lg-4">
-              <img alt="" className="rounded-circle" src={imgData} width="140" height="140" />
+              <Zoom delay={1600}><img alt="" className="rounded-circle" src={imgData} width="140" height="140" /></Zoom>
               <h2>Simple Syntax</h2>
               <p>Choose from a number of easy to to remember reveal effects. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             </div>
