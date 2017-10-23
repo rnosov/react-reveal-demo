@@ -8,7 +8,7 @@
     "gh-pages": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-reveal": "^0.6.1",
+    "react-reveal": "^0.7.0",
     "react-scripts": "1.0.14"
   },
   "scripts": {
